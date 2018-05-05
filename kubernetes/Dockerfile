@@ -2,8 +2,8 @@
 FROM python:2.7
 RUN mkdir -p /service
 # Copy over all the files of interest
-ADD config.py /service/config.py
-ADD manage.py /service/manage.py
+ADD config.py /service/src/config.py
+ADD manage.py /service/src/manage.py
 ADD requirements.txt /service/requirements.txt
 WORKDIR /service/
 RUN pip install -r requirements.txt
